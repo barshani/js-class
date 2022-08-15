@@ -1,22 +1,35 @@
-let list = [];
-
-function addItem() {
-  let newItem = document.querySelector("#item");
-  let val = newItem.value;
-  console.log(newItem);
-  list.push(val);
-  newItem.value="";
-}
-function dispList(){
-    let dispElem =document.querySelectorAll(".disp");
-    dispElem[0].innerHTML="<ul>";
-    for(let item of list){
-       dispElem[0].innerHTML += '<li id="'+item+'" onClick="mark('+item.trim()+')">'+item+'</li>';
+let elem=document.querySelector('#wrap')
+let type=["heart","club","diamond","spades"];
+let flag=true;
+let deck=[];
+class Card{
+    constructor(type,number){
+        this.type=type;
+        this.number=number;
     }
-   dispElem[0].innerHTML+="</ul>";
+    render(){
+        elem.innerHTML+="<div>"+this.type+' of '+this.number+"</div>";
+    }
 }
-function mark(listItem){
-   listItem.innerHTML=listItem.innerHTML.trim();
-   // console.log(listItem);
-   listItem.style.textDecoration = "line-through";
+let btn=document.createElement("button");
+btn.textContent='press me';
+elem.appendChild(btn);
+btn.addEventListener("click",()=>{
+    for(let i =0; i<52;i++){
+    let rand=Math.floor(Math.random()*13)+1;
+    let randType=Math.floor(Math.random()*4);
+    let newCard=new Card(rand,type[randType]);
+    deck.map((card)=>{
+        if(card.number===newCard.number&&card.type===newCard.type)
+            flag=false;
+    })
+    if(flag){
+       deck.push(newCard);
+       newCard.render();
+    }
+    else{
+        i--;
+        flag=true;
+    }
 }
+})
