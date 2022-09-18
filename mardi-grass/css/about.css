@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div.container{
+    height: 60px;
+}
+div.mayer{
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+img{
+    border-radius: 30px;
+}
+div.wrap{
+    margin: 0px 70px 0px 70px;
+}
+@media screen and (max-width: 600px) {
+    div.wrap{
+    margin: 0px 0px 0px 0px;
+    }
+    div.mayer{
+    display:block;
+    margin-top: 10px;
+}
+
+}

@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+div.container{
+    height: 60px;
+}
+img.image{
+    height: 100px;
+    width: 82px;
+}
+div.wrap{
+    margin: 0px 70px 0px 70px;
+    font-family: 'Roboto', sans-serif;
+}
+div.video{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 10px;
+}
+button{
+    display:none;
+}
+h1{
+  font-family: 'Henny Penny';  
+}
+@media screen and (max-width: 600px) {
+    div.wrap{
+    margin: 0px 0px 0px 0px;
+}
+    div.video{
+        display: none;
+    }
+    button{
+    display:block;
+   }
+}

@@ -1,0 +1,33 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+div.container{
+    height: 60px;
+}
+a.nav-link{
+    color: white;
+}
+a.nav-link:hover{
+    color: gray;
+}
+div.form{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+}
+input#comment{
+    height: 100px;
+}
+div.wrap{
+    margin: 0px 70px 0px 70px;
+}
+@media screen and (max-width: 600px) {
+   label{
+    display: none;
+   }
+   input{
+    margin-bottom: 5px;
+   }
+}
