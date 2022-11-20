@@ -1,0 +1,27 @@
+<%- include('./partials/headers.ejs') %>
+<!-- open new css file -->
+<!-- <link rel="stylesheet" href="./css/index.css"> -->
+<title>update</title>
+<%- include('./partials/navBar.ejs') %>
+<h1>You are adding a team properties</h1>
+<h1>You are upddating <%=resoult[0].name%></h1>
+
+<form action="/update/<%=resoult[0].id%>" method="post">
+    <div>
+        <label for="">title</label>
+        <input type="text" name="name" value="<%=resoult[0].name%>">
+    </div>
+    <div>
+        <label for="">body</label>
+        <input type="number" name="points" value="<%=resoult[0].points%>">
+    </div>
+    <div>
+        <label for="">$ price</label>
+        <input type="number" name="rank" value="<%=resoult[0].rank%>">
+    </div>
+    <button> submit</button>
+</form>
+
+</body>
+
+</html>

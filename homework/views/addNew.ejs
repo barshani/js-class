@@ -1,0 +1,26 @@
+<%- include('./partials/headers.ejs') %>
+<!-- open new css file -->
+<!-- <link rel="stylesheet" href="./css/index.css"> -->
+<title>Add new</title>
+<%- include('./partials/navBar.ejs') %>
+<h1>You are adding a new team</h1>
+
+<form action="/insertTeam" method="post">
+    <div>
+        <label for="name">name</label>
+        <input type="text" name="name" placeholder="Please add team's name">
+    </div>
+    <div>
+        <label for="points">points</label>
+        <input type="number" name="points" placeholder="Please add your team's points">
+    </div>
+    <div>
+        <label for="rank">rank</label>
+        <input type="number" name="rank" placeholder="Please add team's rank">
+    </div>
+    <button> submit</button>
+</form>
+
+</body>
+
+</html>

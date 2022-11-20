@@ -1,0 +1,28 @@
+<%- include('./partials/headers.ejs') %>
+<link rel="stylesheet" href="./css/index.css">
+<title>Fruits</title>
+<%- include('./partials/navBar.ejs') %>
+<h1>our league table</h1>
+<% resoult.forEach((item) => { %>
+<div class="wrap">
+  <h3 class="text-info">rank: <%= item.rank%></h3>
+  <h3>name: <%= item.name%></h3>
+  <h3>points:<%= item.points%></h3>
+  <hr>
+</div>
+<div>this is for admin</div>
+
+<a href="/update/<%=item.id%>">🖉</a>
+<a href="/delete/<%=item.id%>">🗑</a>
+
+<%})%>
+
+<button><a href="/add">Add new team</a> </button>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script src="./js/index.js"></script>
+
+</body>
+
+</html>
