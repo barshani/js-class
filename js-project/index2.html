@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/css2.css">
+    <title>search bar</title>
+</head>
+
+<body>
+    <h1>search</h1>
+    <div style="display:flex; flex-direction:column;width: 50vw;">
+        <label for="city">enter citys</label>
+        <input type="text" name="city" id="city">
+        <button onclick="addCity()">submit</button>
+        <label for="text">search your city</label>
+        <input type="text" id="myInput" onkeyup="search()" placeholder="Search for city.." title="Type in a city">
+        <ul id="myUL">
+        </ul>
+    </div>
+    <script src="./js/app2.js"></script>
+</body>
+
+</html>

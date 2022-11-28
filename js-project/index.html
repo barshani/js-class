@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color picker</title>
+</head>
+
+<body>
+    <h1>pick your colors</h1>
+    <label for="number">r</label>
+    <input type="number" name="number" id="number">
+    <label for="number2">b</label>
+    <input type="number" name="number2" id="number2">
+    <label for="number3">g</label>
+    <input type="number" name="number3" id="number3">
+    <button onclick="colorMaker()">click me</button>
+    <button onclick="memoryColors()">add colors</button>
+    <div>
+        <h2>first color</h2>
+        <div id="first" style="border: 3px solid black; width:100px; height: 100px;"></div>
+    </div>
+    <div style="display: inline-block; width: 45vw;">
+        <h2>second color</h2>
+        <div id="second" style="border: 3px solid black; width:100px; height: 100px;"> </div>
+    </div>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
