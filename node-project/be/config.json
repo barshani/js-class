@@ -1,0 +1,16 @@
+{
+    "token": {
+        "expiry": "20m",
+        "cookie": {
+            "expiryPeriod": 5,
+            "expiryType": "minutes"
+        }
+    },
+    "salts": {
+        "hash": "asdfxcv",
+        "jwt": "b4r4sdf"
+    },
+    "database": {
+        "mongoDBUrl": "mongodb://localhost:27017/node_project"
+    }
+}
